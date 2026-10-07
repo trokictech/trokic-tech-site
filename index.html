@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153de8">
+  <meta name="description" content="Trokic Tech LLC develops mobile applications, web software, and practical digital tools. Contact office@trokic.tech for business and product inquiries.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Trokic Tech LLC — Software Development">
+  <meta property="og:description" content="Mobile applications, web software, and practical digital tools from Trokic Tech LLC.">
+  <meta property="og:url" content="https://trokic.tech/">
+  <link rel="canonical" href="https://trokic.tech/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23153de8'/%3E%3Cpath d='M7 9h18v4h-7v12h-4V13H7z' fill='white'/%3E%3C/svg%3E">
+  <title>Trokic Tech LLC — Software Development</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #131a2b;
+      --muted: #536074;
+      --blue: #153de8;
+      --line: #dce2eb;
+      --paper: #ffffff;
+      --soft: #f4f6fb;
+      --width: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-underline-offset: .24em; }
+    a:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
+    p, h1, h2, h3 { margin: 0; }
+    .container { width: min(var(--width), calc(100% - 4rem)); margin-inline: auto; }
+    .skip-link {
+      position: absolute;
+      top: -5rem;
+      left: 1rem;
+      z-index: 10;
+      padding: .75rem 1rem;
+      background: var(--ink);
+      color: white;
+    }
+    .skip-link:focus { top: 1rem; }
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      min-height: 104px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { display: flex; align-items: center; gap: .8rem; text-decoration: none; }
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      background: var(--blue);
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 750;
+      line-height: 1;
+      border-radius: 9px;
+      flex-shrink: 0;
+    }
+    .brand-name { font-size: 1.05rem; font-weight: 700; letter-spacing: -.025em; }
+    nav { display: flex; flex-wrap: wrap; gap: 1.8rem; }
+    nav a { font-size: .9rem; font-weight: 600; text-decoration: none; }
+    nav a:hover { color: var(--blue); }
+    .hero { padding-block: 6.5rem 5rem; }
+    .eyebrow {
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    h1 {
+      max-width: 960px;
+      margin-top: 1.5rem;
+      font-size: clamp(2.65rem, 6.6vw, 5.5rem);
+      font-weight: 650;
+      letter-spacing: -.065em;
+      line-height: 1.09;
+    }
+    h1 span { display: block; color: var(--blue); }
+    .hero-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 3rem;
+      margin-top: 2.5rem;
+    }
+    .hero-copy { max-width: 610px; color: var(--muted); font-size: 1.2rem; line-height: 1.7; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: .85rem 1.4rem;
+      background: var(--blue);
+      color: white;
+      border: 1px solid var(--blue);
+      border-radius: 5px;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .button:hover { background: #102fb5; border-color: #102fb5; }
+    .focus-strip { display: flex; flex-wrap: wrap; gap: 1rem 3rem; padding-block: 1.4rem; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .focus-strip span { font-size: .9rem; color: var(--muted); }
+    .section { padding-block: 5rem; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 5rem; }
+    h2 { font-size: clamp(1.85rem, 3vw, 2.55rem); font-weight: 650; letter-spacing: -.045em; line-height: 1.2; }
+    .about-title h2 { margin-top: 1rem; max-width: 350px; }
+    .prose p { color: var(--muted); }
+    .prose p + p { margin-top: 1.25rem; }
+    .focus-section { background: var(--soft); border-block: 1px solid var(--line); }
+    .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 2rem; margin-bottom: 2.75rem; }
+    .section-heading p { max-width: 390px; color: var(--muted); }
+    .focus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+    .focus-item { border-top: 2px solid var(--blue); padding-top: 1.5rem; }
+    .item-number { font-family: Consolas, monospace; font-size: .85rem; color: var(--blue); }
+    h3 { margin-block: 1.25rem .65rem; font-size: 1.25rem; font-weight: 650; letter-spacing: -.025em; }
+    .focus-item p { color: var(--muted); }
+    .contact { margin-block: 5rem; padding: 3.5rem; background: var(--ink); color: white; border-radius: 8px; }
+    .contact .eyebrow { color: #aabaff; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 1rem; }
+    .contact p { max-width: 440px; margin-top: 1.2rem; color: #c6cedd; }
+    .contact-details { align-self: end; }
+    .contact-label { display: block; margin-bottom: .4rem; color: #c6cedd; font-size: .9rem; }
+    .email { font-size: clamp(1.25rem, 2.6vw, 1.9rem); font-weight: 600; letter-spacing: -.025em; overflow-wrap: anywhere; }
+    .email:hover { color: #aabaff; }
+    .contact a:focus-visible { outline-color: #aabaff; }
+    .company-name { margin-top: 1.6rem; font-size: .9rem; color: #c6cedd; }
+    .site-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-block: 1.6rem 2rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
+    .site-footer a:hover { color: var(--blue); }
+
+    @media (max-width: 800px) {
+      .hero { padding-block: 4.5rem 3.5rem; }
+      .hero-bottom { align-items: start; flex-direction: column; gap: 1.5rem; }
+      .about-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+      .about-title h2 { max-width: 550px; }
+      .section-heading { flex-direction: column; gap: 1rem; }
+      .focus-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .focus-item { display: grid; grid-template-columns: 2.5rem 1fr; column-gap: 1rem; }
+      .item-number { padding-top: .25rem; }
+      h3 { margin-top: 0; }
+      .focus-item p { grid-column: 2; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .contact { padding: 2.5rem; }
+    }
+    @media (max-width: 520px) {
+      .container { width: calc(100% - 2.5rem); }
+      .site-header { padding-block: 1.3rem; align-items: start; flex-direction: column; gap: 1.1rem; }
+      nav { gap: 1.5rem; }
+      .hero { padding-block: 3.25rem 2.5rem; }
+      .hero-copy { font-size: 1.05rem; }
+      .focus-strip { gap: .5rem 1.25rem; }
+      .section { padding-block: 3.25rem; }
+      .contact { margin-block: 3.25rem; padding: 1.7rem; }
+      .site-footer { flex-direction: column; gap: .4rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header container">
+    <a class="brand" href="./" aria-label="Trokic Tech LLC home">
+      <span class="brand-mark" aria-hidden="true">T</span>
+      <span class="brand-name">Trokic Tech LLC</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#focus">Our focus</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero container" aria-labelledby="hero-title">
+      <p class="eyebrow">Software development</p>
+      <h1 id="hero-title">Technology with<span>a practical purpose.</span></h1>
+      <div class="hero-bottom">
+        <p class="hero-copy">Trokic Tech LLC develops mobile applications, web software, and digital tools that turn everyday needs into useful experiences.</p>
+        <a class="button" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <div class="focus-strip container" aria-label="Areas of focus">
+      <span>Mobile applications</span>
+      <span>Web software</span>
+      <span>Digital tools</span>
+    </div>
+
+    <section id="about" class="section container about-grid" aria-labelledby="about-title">
+      <div class="about-title">
+        <p class="eyebrow">About the company</p>
+        <h2 id="about-title">A clear idea.<br>A useful application.</h2>
+      </div>
+      <div class="prose">
+        <p>Trokic Tech LLC is a software development company focused on creating practical applications. Our work brings together product design and software engineering to make digital experiences clear, approachable, and useful.</p>
+        <p>We focus on how people use a product: the task they want to complete, the information they need, and the simplest way to move forward. That approach guides our work across mobile applications, web software, and supporting digital tools.</p>
+      </div>
+    </section>
+
+    <section id="focus" class="section focus-section" aria-labelledby="focus-title">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="focus-title">What we build</h2>
+          <p>Software shaped around a specific need, with attention to the details that make it useful.</p>
+        </div>
+        <div class="focus-grid">
+          <article class="focus-item">
+            <span class="item-number" aria-hidden="true">01</span>
+            <h3>Mobile applications</h3>
+            <p>Focused experiences for phones and tablets, designed around clear navigation and the tasks people need to complete on the go.</p>
+          </article>
+          <article class="focus-item">
+            <span class="item-number" aria-hidden="true">02</span>
+            <h3>Web software</h3>
+            <p>Browser-based applications that make information accessible and workflows easier to manage across devices.</p>
+          </article>
+          <article class="focus-item">
+            <span class="item-number" aria-hidden="true">03</span>
+            <h3>Digital tools</h3>
+            <p>Purpose-built software for organizing information, supporting decisions, and reducing repetitive work.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact container" aria-labelledby="contact-title">
+      <p class="eyebrow">Contact</p>
+      <div class="contact-grid">
+        <div>
+          <h2 id="contact-title">Let's talk software.</h2>
+          <p>For business inquiries, product questions, or more information about Trokic Tech LLC, contact our office.</p>
+        </div>
+        <div class="contact-details">
+          <span class="contact-label">Business &amp; product inquiries</span>
+          <a class="email" href="mailto:office@trokic.tech">office@trokic.tech</a>
+          <div class="company-name">Trokic Tech LLC · trokic.tech</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <span>&copy; 2026 Trokic Tech LLC. All rights reserved.</span>
+    <a href="mailto:office@trokic.tech">office@trokic.tech</a>
+  </footer>
+</body>
+</html>
