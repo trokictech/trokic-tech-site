@@ -1,4 +1,4 @@
-# Trokic Tech LLC website
+# Trokic Tech website
 
 Official company website: https://trokic.tech
 Public business email: office@trokic.tech
@@ -8,7 +8,7 @@ This repository contains the production static export of the customized Tailwind
 ## Website
 
 - Home: company overview, software focus areas, and Rallymetrica feature.
-- About: Trokic Tech LLC and its approach to software.
+- About: Trokic Tech and its approach to software.
 - Work: Rallymetrica, clearly identified as in development.
 - Process: understand, build, and refine.
 - Contact: working email links to office@trokic.tech.
