@@ -1,42 +1,30 @@
 # Trokic Tech LLC website
 
-A self-contained company website for **trokic.tech**, with **office@trokic.tech** as the public contact. No installation, build step, external fonts, or JavaScript is needed. Open `index.html` directly to preview it.
+Official company website: https://trokic.tech
+Public business email: office@trokic.tech
 
-## Publish with GitHub Pages
+This repository contains the production static export of the customized Tailwind Plus Studio website. The GitHub Pages workflow publishes the contents of `site.zip` from `main` at the custom domain `trokic.tech`.
 
-1. Create a dedicated GitHub repository for this website. Use a public repository if you are on GitHub Free. Avoid uploading your existing application repository or business documents.
-2. Upload `index.html`, `CNAME`, and `.nojekyll` to the repository root. Upload the files inside this folder, not the enclosing `trokic-tech-site` folder. The README is optional.
-3. In the repository, open **Settings → Pages**. Under **Build and deployment**, choose **Deploy from a branch**, then **main** and **/(root)**, and click **Save**.
-4. Under **Custom domain**, enter **trokic.tech** and click **Save**. Do this before changing DNS. The included `CNAME` file records the domain, but the GitHub Pages setting still needs to be configured.
-5. At the provider that manages DNS for `trokic.tech`, point the apex domain to GitHub Pages with these four **A** records. Providers usually use `@` or a blank name for the apex:
+## Website
 
-   | Type | Name | Value |
-   | --- | --- | --- |
-   | A | @ | 185.199.108.153 |
-   | A | @ | 185.199.109.153 |
-   | A | @ | 185.199.110.153 |
-   | A | @ | 185.199.111.153 |
+- Home: company overview, software focus areas, and Rallymetrica feature.
+- About: Trokic Tech LLC and its approach to software.
+- Work: Rallymetrica, clearly identified as in development.
+- Process: understand, build, and refine.
+- Contact: working email links to office@trokic.tech.
 
-   Replace any existing apex A records pointing to another web host. If you have apex AAAA records, follow GitHub's IPv6 instructions so they do not point to an old host. Keep existing MX, email-related TXT, and other email records intact so `office@trokic.tech` continues to work.
+There are no sample clients, testimonials, staff biographies, newsletter forms, or disconnected contact forms. The site loads its fonts and assets locally.
 
-6. Optionally add a **CNAME** record for `www` pointing to **YOUR-GITHUB-USERNAME.github.io** (replace that text with your actual GitHub username). Do not include `https://` or a repository path.
-7. When GitHub finishes the domain check and certificate setup, enable **Enforce HTTPS** in **Settings → Pages**. DNS changes can take up to 24 hours.
-8. Visit **https://trokic.tech/**, check the page on your phone, and verify that the contact address is correct and can receive mail.
+## Source and updates
 
-GitHub also recommends [verifying ownership of your custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages).
+The licensed, editable Studio source is retained on the owner’s computer in `.private/studio/`. The entire `.private/` directory is ignored by Git and must not be uploaded as a reusable template. Keep a private backup of this directory; cloning this public repository restores only the built website.
 
-Official setup references: [Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site), [Publishing from a branch](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site), and [Custom domains and DNS](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+To update the site, edit the source inside `.private/studio/src`, run `npm ci` if dependencies are missing, then `npm run build` from `.private/studio`. Review the `out/` export locally, then run `python package-site.py` from the repository root. This creates `site.zip` with all pages, route data, and assets, and updates the root `index.html` for reference. Commit and push `site.zip` and `index.html`; the Pages workflow deploys the archive. Generated folders are ignored because the complete website is stored in `site.zip`. Preserve `CNAME` and `.nojekyll`.
 
-## Before Apple organization enrollment
+The production export uses Next.js static output, trailing-slash routes, local image files, and no server-side image service. Source maps are disabled. Do not publish `node_modules`, `.next`, the original template archive, or the private source.
 
-Use **https://trokic.tech/** as the company website and **office@trokic.tech** as the work email, once both are working. Review the page copy to confirm it accurately describes your company's work. The page includes the supplied legal company name, an overview, software focus areas, and contact details; it does not invent an address, registration number, client list, or released products.
+## Hosting
 
-Apple requires a public, functional website with a domain associated with the organization and a work email on that domain. Apple explicitly excludes websites with minimal content and registrar placeholders. A website is one part of enrollment; legal entity verification, a D-U-N-S number, and the other enrollment requirements still apply. This page does not guarantee Apple's approval.
+Keep `CNAME` set to `trokic.tech` and `.nojekyll` present so GitHub serves `_next` assets. Pages settings: source **GitHub Actions**, custom domain `trokic.tech`, and HTTPS enabled. The workflow extracts only the built public website archive; no npm install or licensed source upload is needed on GitHub.
 
-Source: [Apple Developer Program enrollment requirements](https://developer.apple.com/programs/enroll/).
-
-## Editing
-
-All page content and styling are in `index.html`. Company name, contact email, title, description, and canonical URL are already configured. The footer year is plain text and can be updated when needed.
-
-This website contains no analytics, forms, or tracking scripts. GitHub Pages hosts the site; the page itself makes no claim about the hosting provider's logging practices.
+Squarespace DNS is already configured for GitHub Pages. Keep the website A records and `www` CNAME, along with the existing email DNS records.
