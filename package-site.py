@@ -13,8 +13,13 @@ if any(path.is_symlink() or path.suffix == ".map" for path in files):
 archive = root / "site.zip"
 with ZipFile(archive, "w", ZIP_DEFLATED) as bundle:
     for path in files:
-        bundle.write(path, path.relative_to(export).as_posix())
+        relative = path.relative_to(export)
+        bundle.write(path, relative.as_posix())
+        # Next's navigation prefetch requests flatten the segment file name.
+        if len(relative.parts) > 1 and relative.parent.name.startswith("__next."):
+            alias = relative.parent.parent / (relative.parent.name + "." + relative.name)
+            bundle.write(path, alias.as_posix())
     bundle.write(root / "CNAME", "CNAME")
     bundle.write(root / ".nojekyll", ".nojekyll")
 copy2(export / "index.html", root / "index.html")
-print(f"Packaged {len(files) + 2} website files in {archive.name}")
+print(f"Packaged {len(bundle.namelist())} website files in {archive.name}")
