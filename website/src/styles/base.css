@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Mona Sans';
+  font-weight: 200 900;
+  font-display: swap;
+  font-style: normal;
+  font-stretch: 75% 125%;
+  src: url('../fonts/Mona-Sans.var.woff2') format('woff2');
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-brand-red);
+  outline-offset: 5px;
+}
+::selection {
+  background: color-mix(in srgb, var(--color-brand-red) 15%, white);
+  color: var(--color-neutral-950);
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}
