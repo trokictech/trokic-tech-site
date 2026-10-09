@@ -1,7 +1,10 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
+
+const projectUrl = 'https://rallymetrica.com/'
 
 export function ProjectFeature({ detail = false }) {
   return (
@@ -18,7 +21,9 @@ export function ProjectFeature({ detail = false }) {
               </span>
             </div>
             <h2 className="mt-8 font-display text-4xl font-medium tracking-tight text-white sm:text-5xl">
-              Rallymetrica<span className="text-rallymetrica-accent">.</span>
+              <Link href={projectUrl}>
+                Rallymetrica<span className="text-rallymetrica-accent">.</span>
+              </Link>
             </h2>
             <p className="mt-6 max-w-md text-xl text-neutral-300">
               A clearer picture of every point.
@@ -30,19 +35,18 @@ export function ProjectFeature({ detail = false }) {
               season trends. Coaches link to their students and follow every
               match live, point by point, from anywhere.
             </p>
-            {detail ? (
+            {detail && (
               <p className="mt-6 text-base text-neutral-300">
                 Designed around a point-by-point record, a full statistics
                 engine, and reports a player can read at the end of the match.
               </p>
-            ) : (
-              <Button href="/work/" invert className="mt-8">
-                Explore the project{' '}
-                <span aria-hidden="true" className="ml-3">
-                  ↗︎
-                </span>
-              </Button>
             )}
+            <Button href={projectUrl} invert className="mt-8">
+              Explore the project{' '}
+              <span aria-hidden="true" className="ml-3">
+                ↗︎
+              </span>
+            </Button>
             <div className="@container mt-12 w-full">
               <p className="flex w-full items-center justify-between text-[clamp(0.3125rem,2.5cqw,0.75rem)] leading-6 tracking-wide whitespace-nowrap text-neutral-300">
                 <span>TENNIS</span>{' '}
@@ -73,7 +77,11 @@ export function ProjectFeature({ detail = false }) {
               <circle cx="260" cy="310" r="205" strokeDasharray="3 10" />
             </svg>
             <div className="relative flex w-full max-w-xs flex-col items-center">
-              <div className="rounded-[2.5rem] border border-white/10 bg-neutral-950/90 p-8 shadow-2xl shadow-black/50 motion-safe:transition-transform motion-safe:duration-500 motion-safe:hover:-rotate-3">
+              <Link
+                href={projectUrl}
+                aria-label="Visit Rallymetrica"
+                className="rounded-[2.5rem] border border-white/10 bg-neutral-950/90 p-8 shadow-2xl shadow-black/50 motion-safe:transition-transform motion-safe:duration-500 motion-safe:hover:-rotate-3"
+              >
                 <Image
                   src="/rallymetrica.svg"
                   width={160}
@@ -81,7 +89,7 @@ export function ProjectFeature({ detail = false }) {
                   alt="Rallymetrica logo"
                   className="h-40 w-40"
                 />
-              </div>
+              </Link>
               <p className="mt-8 font-mono text-sm tracking-widest text-brand-grey">
                 RECORD. ANALYZE. IMPROVE.
               </p>
