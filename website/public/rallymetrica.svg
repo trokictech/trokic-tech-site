@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" role="img" aria-labelledby="rally-rm-title">
+  <title id="rally-rm-title">Rallymetrica RM monogram with tennis ball and two metric bars</title>
+  <defs>
+    <mask id="rally-rm-ball-seams" x="136" y="116" width="36" height="36" maskUnits="userSpaceOnUse" style="mask-type:luminance">
+      <circle cx="154" cy="134" r="16.5" fill="white"/>
+      <path d="M138 130 C150 129 160 143 151 151 M160 118 C155 129 163 137 171 138" transform="translate(154 134) scale(1.137931034483) translate(-154 -134)" stroke="black" stroke-width="3" stroke-linecap="round"/>
+    </mask>
+  </defs>
+  <path d="M52 44 H102 C130 44 145 60 145 83 C145 105 132 119 111 125 L154 165 L190 126 H213 V215 H190 V158.435 L155.186 196.150 L82.999 129 H74 V158 H52 Z M74 65 V108 H101 C116 108 123 100 123 84 C123 72 115 65 101 65 Z" fill="#f9f9fc" fill-rule="evenodd"/>
+  <path data-accent="" d="M89 141 L111 162 V215 H89 Z M117 167.727 L139 188.727 V215 H117 Z" fill="#f3f69b"/>
+  <circle data-accent="" cx="154" cy="134" r="16.5" fill="#f3f69b" mask="url(#rally-rm-ball-seams)"/>
+</svg>

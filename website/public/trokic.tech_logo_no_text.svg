@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="64"
+   height="64"
+   viewBox="0 0 64.000001 64"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="trokic.tech_logo_no_text.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   inkscape:export-filename="trokic.tech_logo_no_text_128.png"
+   inkscape:export-xdpi="192"
+   inkscape:export-ydpi="192"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="true"
+     showguides="true"
+     inkscape:zoom="13.248766"
+     inkscape:cx="44.872104"
+     inkscape:cy="43.588965"
+     inkscape:window-width="2657"
+     inkscape:window-height="2061"
+     inkscape:window-x="269"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1"
+     inkscape:export-bgcolor="#ffffffff"
+     inkscape:clip-to-page="true">
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="-82.787857"
+       originy="-187.7"
+       spacingx="0.99999998"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     id="T"
+     transform="translate(-58.701695,6.5999987)"
+     style="stroke:none">
+    <path
+       style="font-weight:600;font-size:70.5556px;font-family:Orbitron;-inkscape-font-specification:'Orbitron Semi-Bold';fill:#20212d;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+       d="M 87.612225,0 85.324507,8.536946 74.000135,50.800003 h 8.53746 L 93.861967,8.536946 H 114.95784 L 117.24555,0 Z"
+       id="TRight" />
+    <path
+       style="font-weight:600;font-size:70.5556px;font-family:Orbitron;-inkscape-font-specification:'Orbitron Semi-Bold';fill:#f10026;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+       d="m 66.445557,0 -2.287716,8.536946 h 8.839771 L 75.285327,0 Z"
+       id="TLeft" />
+  </g>
+  <rect
+     style="display:inline;fill:#f10026;fill-opacity:1;stroke:none;stroke-width:0.075447;stroke-dasharray:none;stroke-opacity:1"
+     id="rect33"
+     width="64"
+     height="2.1199999"
+     x="7.1054274e-15"
+     y="61.880001"
+     inkscape:label="rectangle" />
+</svg>

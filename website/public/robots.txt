@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://trokic.tech/sitemap.xml
