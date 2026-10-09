@@ -13,3 +13,11 @@
 /rallymetrica.svg
 /robots.txt
 /sitemap.xml
+/website/node_modules/
+/website/.next/
+/website/out/
+/website/.openai/
+/website/.sites-runtime/
+/website/.env*
+/website/coverage/
+/website/*.log
